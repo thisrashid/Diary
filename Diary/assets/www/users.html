@@ -1,0 +1,60 @@
+<div data-role="page" id="page-users" class="type-interior" data-theme="b">
+	<div data-role="header" data-theme="b">
+		<a href="#" data-rel="back" data-icon="back">Back</a>
+		<h1>My Diary</h1>
+		<a href="index.html" data-icon="home" data-iconpos="notext" id="intro"
+			class="ui-btn-right">intro</a>
+		
+		<div data-role="navbar">
+			<ul>
+				<li><a id="users" href="users.html">Users</a></li>
+				<li><a id="expanses"href="expenses.html">Expenses</a></li>
+				<li><a id="notes" href="notes.html">Notes</a></li>
+			</ul>
+		</div>
+	</div>
+	<div data-role="content" data-theme="c">
+			<div class="api-div" id="api-users">
+				<a id="click-addUser" data-role="button" data-icon="plus" data-inline="true">Add User</a>
+				<a onclick="getUsers()" data-role="button" data-icon="plus" data-inline="true">Read</a>
+				<ul id="user-list" 
+					data-role="listview" 
+					data-theme="c" 
+					data-filter="true" 
+					data-inset="true">
+					<!-- 
+					<li><a id="click-1">Rashid Azar</a></li>
+					 -->
+				</ul>
+			</div>
+		<div class="content-primary">
+			<div class="api-div" id="api-addUser">
+				<span id="user-sql-result"></span><br/>
+				<form action="#" method="post">
+					<input type="hidden" name="user-id" id="user-id" value=""/>
+					<label for="user-name">Name:</label>
+					<input type="text" name="name" id="user-name" data-mini="true" />
+					<a id="user-delete" 
+						data-role="button" 
+						data-icon="save" 
+						data-inline="true"
+						data-theme="a">Delete</a>
+					<a id="user-submit" 
+						data-role="button" 
+						data-icon="delete" 
+						data-inline="true">Save</a>
+				</form>
+			</div>
+			<div class="api-div" id="api-expanses">
+				<h2>Expenses</h2>
+			</div>
+	
+		    <div class="api-div" id="api-notes">
+				<h2>Notes</h2>
+			</div>
+		</div>
+	</div>
+	<div data-role="footer" data-position="fixed" class="footer-docs" data-theme="b">
+		<p>&copy; 2012 eCafechat Diary</p>
+	</div>
+</div>

@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta name="viewport" content="width=320; user-scalable=no" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<title>Minimal AppLaud App</title>
+
+<link rel="stylesheet" href="jquery.mobile/jquery.mobile-1.1.0.min.css" />
+<link rel="stylesheet" href="index.css" />
+
+<script src="jquery.mobile/jquery-1.7.2.min"></script>
+<script type="text/javascript">
+$(document).bind("mobileinit", function(){
+	$.mobile.defaultPageTransition='none';
+	$.mobile.allowCrossDomainPages = true;
+	$.mobile.touchOverflowEnabled = true;
+}); 
+</script>
+<script src="jquery.mobile/jquery.mobile-1.1.0.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="cordova-2.0.0.js"></script>
+<script type="text/javascript" charset="utf-8" src="index.js"></script>
+<script type="text/javascript" charset="utf-8">
+	var onDeviceReady = function() {
+		//document.getElementById("devready").innerHTML = "OnDeviceReady fired.";
+	};
+
+	function init() {
+		document.addEventListener("deviceready", onDeviceReady, true);
+	}
+</script>
+
+</head>
+<body onload="init();" id="stage" class="theme">
+	<div data-role="page" id="page-home" class="type-interior" data-theme="b">
+		<div data-role="header" data-theme="b">
+			<h1>My Diary</h1>
+			<a href="#" data-icon="home" data-iconpos="notext" id="intro"
+				class="ui-btn-right">intro</a>
+			
+			<div data-role="navbar">
+				<ul>
+					<li><a id="users" href="users.html">Users</a></li>
+					<li><a id="expanses" href="expenses.html">Expenses</a></li>
+					<li><a id="notes" href="notes.html">Notes</a></li>
+				</ul>
+			</div>
+		</div>
+		<div data-role="content" data-theme="c">
+			<div class="content-secondary">
+				This is my diary.
+			</div>
+		</div>
+		<div data-role="footer" data-position="fixed" class="footer-docs" data-theme="b">
+			<p>&copy; 2012 eCafechat Diary</p>
+		</div>
+	</div>
+	<script type="text/javascript" charset="utf-8" src="js/users.js"></script>
+</body>
+</html>
